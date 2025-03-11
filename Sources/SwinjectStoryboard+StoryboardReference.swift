@@ -31,7 +31,7 @@ internal extension SwinjectStoryboard {
     static var referencingStoryboard: SwinjectStoryboard? {
         return storyboardStack.last
     }
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     class func createReferenced(name: String, bundle storyboardBundleOrNil: Bundle?) -> SwinjectStoryboard {
         if let container = referencingStoryboard?.container.value {
             return create(name: name, bundle: storyboardBundleOrNil, container: container)

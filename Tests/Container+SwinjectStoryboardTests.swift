@@ -9,7 +9,7 @@
 import XCTest
 import Swinject
 
-#if os(iOS) || os(OSX) || os(tvOS)
+#if os(iOS) || os(OSX) || os(tvOS) || os(visionOS)
 
 class Container_SwinjectStoryboardTests: XCTestCase {
     func testCustomStringConvertibleDescribesRegistrationWithStoryboardOption() {

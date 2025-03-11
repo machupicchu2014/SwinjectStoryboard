@@ -8,7 +8,7 @@
 
 import Swinject
 
-#if os(iOS) || os(OSX) || os(tvOS)
+#if os(iOS) || os(OSX) || os(tvOS) || os(visionOS)
 internal struct SwinjectStoryboardOption: ServiceKeyOption {
     internal let controllerType: String
     

@@ -39,7 +39,7 @@ extension Container {
 
 
 extension Container {
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     /// The typealias to UIViewController.
     public typealias Controller = UIViewController
     

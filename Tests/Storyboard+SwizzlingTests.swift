@@ -9,7 +9,7 @@
 import XCTest
 @testable import SwinjectStoryboard
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) 
 private typealias Storyboard = UIStoryboard
 private typealias Name = String
 #elseif os(OSX)

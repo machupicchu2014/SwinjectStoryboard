@@ -13,7 +13,7 @@ import Swinject
     import Cocoa
 #endif
 
-#if os(iOS) || os(tvOS) || os(OSX)
+#if os(iOS) || os(tvOS) || os(OSX) || os(visionOS)
 
 /// The `SwinjectStoryboard` provides the features to inject dependencies of view/window controllers in a storyboard.
 ///
@@ -45,7 +45,7 @@ public class SwinjectStoryboard: _SwinjectStoryboardBase, SwinjectStoryboardProt
         super.init()
     }
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     /// Creates the new instance of `SwinjectStoryboard`. This method is used instead of an initializer.
     ///
     /// - Parameters:
