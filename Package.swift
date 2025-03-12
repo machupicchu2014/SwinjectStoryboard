@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
@@ -7,26 +7,27 @@ let package = Package(
         .macOS(.v10_10),
         .iOS(.v9),
         .tvOS(.v9),
+        .visionOS(.v1)
     ],
     products: [
         .library(name: "SwinjectStoryboard", targets: ["SwinjectStoryboard"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Swinject/Swinject.git", .upToNextMajor(from: "2.7.1")),
+        .package(url: "https://github.com/machupicchu2014/Swinject.git", branch: "master"),
     ],
     targets: [
-        .target(
-            name: "SwinjectStoryboard-ObjC",
-            path: "Sources/ObjectiveC",
-            cSettings: [
-                .headerSearchPath("Others")
-            ]
-        ),
+//        .target(
+//            name: "SwinjectStoryboard-ObjC",
+//            path: "Sources/ObjectiveC",
+//            cSettings: [
+//                .headerSearchPath("Others")
+//            ]
+//        ),
         .target(
             name: "SwinjectStoryboard",
             dependencies: [
                 "Swinject",
-                "SwinjectStoryboard-ObjC"
+//                "SwinjectStoryboard-ObjC"
             ],
             path: "Sources",
             exclude: [
