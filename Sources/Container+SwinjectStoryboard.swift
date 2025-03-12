@@ -11,7 +11,7 @@
 #endif
 import Swinject
 
-#if os(iOS) || os(OSX) || os(tvOS)
+#if os(iOS) || os(OSX) || os(tvOS) || os(visionOS)
 extension Container {
     /// Adds a registration of the specified view or window controller that is configured in a storyboard.
     ///
