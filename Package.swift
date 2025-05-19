@@ -16,18 +16,16 @@ let package = Package(
         .package(url: "https://github.com/machupicchu2014/Swinject.git", branch: "master"),
     ],
     targets: [
-//        .target(
-//            name: "SwinjectStoryboard-ObjC",
-//            path: "Sources/ObjectiveC",
-//            cSettings: [
-//                .headerSearchPath("Others")
-//            ]
-//        ),
+        .target(
+            name: "SwinjectStoryboard-ObjC",
+            path: "Sources/ObjectiveC",
+            publicHeadersPath: "Others"
+        ),
         .target(
             name: "SwinjectStoryboard",
             dependencies: [
                 "Swinject",
-//                "SwinjectStoryboard-ObjC"
+                "SwinjectStoryboard-ObjC"
             ],
             path: "Sources",
             exclude: [
