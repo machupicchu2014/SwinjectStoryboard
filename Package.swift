@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "SwinjectStoryboard", targets: ["SwinjectStoryboard"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/machupicchu2014/Swinject.git", branch: "master"),
+        .package(url: "https://github.com/Swinject/Swinject", from: "2.9.1"),
     ],
     targets: [
         .target(
